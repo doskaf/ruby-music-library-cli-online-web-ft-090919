@@ -1,5 +1,3 @@
-require 
-
 class Artist
   extend Concerns::Findable
   
