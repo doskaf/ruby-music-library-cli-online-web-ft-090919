@@ -46,13 +46,9 @@ class Artist
   end
   
   def genres
-    genre_arr = []
-    @songs.each do |song|
-      if !(genre_arr.include?(song.genre))
-        genre_arr << song.genre
-      end
+    @songs.map do |song|
+      song.genre
     end
-    genre_arr
   end
   
 end
