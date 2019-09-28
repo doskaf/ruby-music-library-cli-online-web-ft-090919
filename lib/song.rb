@@ -67,6 +67,7 @@ class Song
     song.genre = genre
     song.artist = artist
     song
+    binding.pry
   end
     
 end
