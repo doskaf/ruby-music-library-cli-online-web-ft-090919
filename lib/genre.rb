@@ -1,3 +1,4 @@
+require 'pry'
 class Genre
   
   attr_accessor :name, :songs
@@ -26,5 +27,6 @@ class Genre
     genre.save
     genre
   end
+  binding.pry
   
 end
