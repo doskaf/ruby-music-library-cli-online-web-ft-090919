@@ -13,6 +13,7 @@ class Song
     end
     if genre != nil
       self.genre = genre
+    end
   end
   
   def self.all
