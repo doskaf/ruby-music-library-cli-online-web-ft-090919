@@ -9,6 +9,10 @@ module Concerns
       self.all.find {|item| item.name == name}
     end
     
+    def find_or_create_by_name
+      
+    end
+    
   end
   
 end
