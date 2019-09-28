@@ -30,8 +30,8 @@ class Genre
   def add_song(song)
     if song.genre == nil
       song.genre = self
-      @songs << song
     end
+    @songs << song
   end
   
 end
