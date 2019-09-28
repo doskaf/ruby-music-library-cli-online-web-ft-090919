@@ -28,6 +28,5 @@ class Song
     song.save
     song
   end
-  binding.pry
   
 end
