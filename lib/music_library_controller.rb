@@ -68,9 +68,11 @@ class MusicLibraryController
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
     input = gets.chomp
-    self.library.map do |song|
+    songs = self.library.map do |song|
       song.artist.name == input
     end
+    songs.each do |song|
+      
   end
   
 end
