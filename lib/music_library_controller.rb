@@ -102,6 +102,8 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     input = gets.chomp
+    song = self.library.find {|song| song.index == input + 1}
+    puts "Playing #{song.name} by #{song.artist}"
   end
   
 end
