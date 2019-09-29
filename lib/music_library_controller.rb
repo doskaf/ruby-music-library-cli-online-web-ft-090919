@@ -47,22 +47,22 @@ class MusicLibraryController
   end
 
   def list_songs
-    lib = self.library.sort_by {|song|song.name}
+    lib = self.library.sort_by {|song| song.name}
     lib.each do |song|
       puts "#{lib.index(song) + 1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
     end
   end
   
   def list_artists
-    lib = self.library(Artist).sort_by {|object| object.name}
-    artists = lib.collect {|object| "#{object.name}"}.uniq
+    lib = self.library(Artist).sort_by {|item| item.name}
+    artists = lib.collect {|item| "#{item.name}"}.uniq
     artists.each {|artist| puts "#{artists.index(artist) + 1}. #{artist}"}
   end
   
   def list_genres
-    lib = self.library(Genre).sort_by {|object| object.name}
-    artists = lib.collect {|object| "#{object.name}"}.uniq
-    artists.each {|artist| puts "#{artists.index(artist) + 1}. #{artist}"}
+    lib = self.library(Genre).sort_by {|item| item.name}
+    genres = lib.collect {|item| "#{item.name}"}.uniq
+    genres.each {|genre| puts "#{genres.index(genre) + 1}. #{genre}"}
   end
   
 end
