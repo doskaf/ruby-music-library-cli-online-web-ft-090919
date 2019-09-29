@@ -59,4 +59,10 @@ class MusicLibraryController
     artists.each {|artist| puts "#{artists.index(artist) + 1}. #{artist}"}
   end
   
+  def list_genres
+    lib = self.library(Genre).sort_by {|object| object.name}
+    artists = lib.collect {|object| "#{object.name}"}.uniq
+    artists.each {|artist| puts "#{artists.index(artist) + 1}. #{artist}"}
+  end
+  
 end
