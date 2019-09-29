@@ -106,6 +106,11 @@ class MusicLibraryController
     end
   end
   
+  def file_parser(filename)
+    file_bits = filename.gsub(/(\.mp3)/,'')
+    file_bits = file_bits.split(" - ")
+  end
+  
   def play_song
     puts "Which song number would you like to play?"
     input = gets.chomp
