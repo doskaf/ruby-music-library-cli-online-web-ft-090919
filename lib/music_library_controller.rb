@@ -71,8 +71,8 @@ class MusicLibraryController
     songs = self.library.map do |song|
       song.artist.name == input
     end
-    songs.each do |song|
-      
+    artist_songs = artist_songs.sort_by{|song|song.name}
+    artist_songs.each {|song|puts "#{artist_songs.index(song) + 1}. #{song.name} - #{song.genre.name}"} unless artist_songs == nil
   end
   
 end
