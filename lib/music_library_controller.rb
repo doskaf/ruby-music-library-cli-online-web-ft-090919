@@ -117,7 +117,7 @@ class MusicLibraryController
     input = gets.chomp.to_i
     if input > 0 && input <= self.library.size
       selected_song = songs[input - 1]
-      selected_song = name_extractor(selected_song)[1]
+      selected_song = parser(selected_song)[1]
       song = Song.find_by_name(selected_song)
       puts "Playing #{song.name} by #{song.artist.name}" unless song == nil
     end
