@@ -106,9 +106,9 @@ class MusicLibraryController
     end
   end
   
-  def file_parser(filename)
-    file_bits = filename.gsub(/(\.mp3)/,'')
-    file_bits = file_bits.split(" - ")
+  def parser(filename)
+    file_parts = filename.gsub(/(\.mp3)/,'')
+    file_parts = file_parts.split(" - ")
   end
   
   def play_song
