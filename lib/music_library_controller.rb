@@ -8,4 +8,8 @@ class MusicLibraryController
     file.import
   end
   
+  def call
+    
+  end
+  
 end
