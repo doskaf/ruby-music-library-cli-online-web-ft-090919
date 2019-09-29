@@ -10,7 +10,7 @@ class MusicLibraryController
   
   def call
     puts "Welcome to your music library!"
-    "To list all of your songs, enter 'list songs'."
+    puts "To list all of your songs, enter 'list songs'."
   end
   
 end
