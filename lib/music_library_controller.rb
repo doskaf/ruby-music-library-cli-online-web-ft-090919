@@ -94,7 +94,7 @@ class MusicLibraryController
     songs = songs.sort_by {|song| song.name}
     songs.each do |song|
       if songs != nil
-        puts "#{songs.index(song) + 1}. #{song.name} - #{song.artist.name}"
+        puts "#{songs.index(song) + 1}. #{song.artist.name} - #{song.name}"
       end
     end
   end
