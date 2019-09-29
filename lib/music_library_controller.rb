@@ -99,6 +99,13 @@ class MusicLibraryController
     end
   end
   
+  def song_array
+    lib = self.library.sort_by {|song| song.name}
+    lib.collect do |song|
+      "#{lib.index(song) + 1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+    end
+  end
+  
   def play_song
     puts "Which song number would you like to play?"
     input = gets.chomp
